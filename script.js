@@ -46,7 +46,7 @@ function winCondations() {
         setTimeout(() => {
             player1scores++
             player1score.innerHTML = `${player1scores}`
-            alert("you win")
+            alert("Player 1 win")
             resetGame()
         }, 100);
 
@@ -56,7 +56,7 @@ function winCondations() {
         setTimeout(() => {
             player1scores++
             player1score.innerHTML = `${player1scores}`
-            alert("you win")
+            alert("Player 1 win")
             resetGame()
         }, 100);
 
@@ -66,7 +66,7 @@ function winCondations() {
         setTimeout(() => {
             player1scores++
             player1score.innerHTML = `${player1scores}`
-            alert("you win")
+            alert("Player 1 win")
             resetGame()
         }, 100);
 
@@ -75,7 +75,7 @@ function winCondations() {
         setTimeout(() => {
             player1scores++
             player1score.innerHTML = `${player1scores}`
-            alert("you win")
+            alert("Player 1 win")
             resetGame()
         }, 100);
 
@@ -84,7 +84,7 @@ function winCondations() {
         setTimeout(() => {
             player1scores++
             player1score.innerHTML = `${player1scores}`
-            alert("you win")
+            alert("Player 1 win")
             resetGame()
         }, 100);
 
@@ -93,7 +93,7 @@ function winCondations() {
         setTimeout(() => {
             player1scores++
             player1score.innerHTML = `${player1scores}`
-            alert("you win")
+            alert("Player 1 win")
             resetGame()
         }, 100);
 
@@ -102,7 +102,7 @@ function winCondations() {
         setTimeout(() => {
             player1scores++
             player1score.innerHTML = `${player1scores}`
-            alert("you win")
+            alert("Player 1 win")
             resetGame()
         }, 100);
 
@@ -112,16 +112,16 @@ function winCondations() {
         setTimeout(() => {
             player1scores++
             player1score.innerHTML = `${player1scores}`
-            alert("you win")
+            alert("Player 1 win")
             resetGame()
         }, 100);
     }
 
-    if (cell1.innerHTML === "O" && cell2.innerHTML === "O" && cell3.innerHTML === "O") {
+    else if (cell1.innerHTML === "O" && cell2.innerHTML === "O" && cell3.innerHTML === "O") {
         setTimeout(() => {
             player2scores++
             player2score.innerHTML = `${player2scores}`
-            alert("you win")
+            alert("Player 2 win")
             resetGame()
         }, 100);
 
@@ -130,8 +130,8 @@ function winCondations() {
     else if (cell1.innerHTML === "O" && cell4.innerHTML === "O" && cell7.innerHTML === "O") {
         setTimeout(() => {
             player2scores++
-            playerscore.innerHTML = `${player2scores}`
-            alert("you win")
+            player2score.innerHTML = `${player2scores}`
+            alert("Player 2 win")
             resetGame()
         }, 100);
 
@@ -141,7 +141,7 @@ function winCondations() {
         setTimeout(() => {
             player2scores++
             player2score.innerHTML = `${player2scores}`
-            alert("you win")
+            alert("Player 2 win")
             resetGame()
         }, 100);
 
@@ -150,7 +150,7 @@ function winCondations() {
         setTimeout(() => {
             player2scores++
             player2score.innerHTML = `${player2scores}`
-            alert("you win")
+            alert("Player 2 win")
             resetGame()
         }, 100);
 
@@ -159,7 +159,7 @@ function winCondations() {
         setTimeout(() => {
             player2scores++
             player2score.innerHTML = `${player2scores}`
-            alert("you win")
+            alert("Player 2 win")
             resetGame()
         }, 100);
 
@@ -168,7 +168,7 @@ function winCondations() {
         setTimeout(() => {
             player2scores++
             player2score.innerHTML = `${player2scores}`
-            alert("you win")
+            alert("Player 2 win")
             resetGame()
         }, 100);
 
@@ -177,7 +177,7 @@ function winCondations() {
         setTimeout(() => {
             player2scores++
             player2score.innerHTML = `${player2scores}`
-            alert("you win")
+            alert("Player 2 win")
             resetGame()
         }, 100);
 
@@ -187,12 +187,13 @@ function winCondations() {
         setTimeout(() => {
             player2scores++
             player2score.innerHTML = `${player2scores}`
-            alert("you win")
+            alert("Player 2 win")
             resetGame()
         }, 100);
     }
 }
 function resetGame() {
+     isClicked = false
     cells.forEach(eachCell => {
       eachCell.innerHTML = ""
       eachCell.classList.remove("clicked")
