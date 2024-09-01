@@ -191,6 +191,19 @@ function winCondations() {
             resetGame()
         }, 100);
     }
+    let allClicked = true;
+    cells.forEach(cell => {
+        if (!cell.classList.contains("clicked")) {
+            allClicked = false;
+        }
+    });
+
+    if (allClicked) {
+        setTimeout(() => {
+            alert("Draw");
+            resetGame();
+        }, 100);
+    }
 }
 function resetGame() {
      isClicked = false
@@ -200,6 +213,6 @@ function resetGame() {
     });
     
 }
-
+ 
 
 
