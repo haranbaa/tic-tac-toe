@@ -29,7 +29,7 @@ const eachCells = (event) => {
         event.target.classList.add("clicked")
         isClicked = true
     }
-    winCondations()
+    winCondition()
 
 
 
@@ -41,18 +41,21 @@ for (let i of cells) {
 let player1scores = 0
 let player2scores = 0
 
-function winCondations() {
+
+function winCondition() {
+    let ifWin = false;
     if (cell1.innerHTML === "X" && cell2.innerHTML === "X" && cell3.innerHTML === "X") {
+        ifWin = true;
         setTimeout(() => {
             player1scores++
             player1score.innerHTML = `${player1scores}`
             alert("Player 1 win")
-            resetGame()
+            resetGame();
         }, 100);
-
-
     }
+
     else if (cell1.innerHTML === "X" && cell4.innerHTML === "X" && cell7.innerHTML === "X") {
+        ifWin = true;
         setTimeout(() => {
             player1scores++
             player1score.innerHTML = `${player1scores}`
@@ -63,6 +66,7 @@ function winCondations() {
     }
 
     else if (cell7.innerHTML === "X" && cell8.innerHTML === "X" && cell9.innerHTML === "X") {
+        ifWin = true;
         setTimeout(() => {
             player1scores++
             player1score.innerHTML = `${player1scores}`
@@ -72,6 +76,7 @@ function winCondations() {
 
     }
     else if (cell3.innerHTML === "X" && cell6.innerHTML === "X" && cell9.innerHTML === "X") {
+        ifWin = true;
         setTimeout(() => {
             player1scores++
             player1score.innerHTML = `${player1scores}`
@@ -81,6 +86,7 @@ function winCondations() {
 
     }
     else if (cell3.innerHTML === "X" && cell5.innerHTML === "X" && cell7.innerHTML === "X") {
+        ifWin = true;
         setTimeout(() => {
             player1scores++
             player1score.innerHTML = `${player1scores}`
@@ -90,6 +96,7 @@ function winCondations() {
 
     }
     else if (cell1.innerHTML === "X" && cell5.innerHTML === "X" && cell9.innerHTML === "X") {
+        ifWin = true;
         setTimeout(() => {
             player1scores++
             player1score.innerHTML = `${player1scores}`
@@ -99,16 +106,16 @@ function winCondations() {
 
     }
     else if (cell2.innerHTML === "X" && cell5.innerHTML === "X" && cell8.innerHTML === "X") {
+        ifWin = true;
         setTimeout(() => {
             player1scores++
             player1score.innerHTML = `${player1scores}`
             alert("Player 1 win")
             resetGame()
         }, 100);
-
-
     }
     else if (cell4.innerHTML === "X" && cell5.innerHTML === "X" && cell6.innerHTML === "X") {
+        ifWin = true;
         setTimeout(() => {
             player1scores++
             player1score.innerHTML = `${player1scores}`
@@ -118,6 +125,7 @@ function winCondations() {
     }
 
     else if (cell1.innerHTML === "O" && cell2.innerHTML === "O" && cell3.innerHTML === "O") {
+        ifWin = true;
         setTimeout(() => {
             player2scores++
             player2score.innerHTML = `${player2scores}`
@@ -128,6 +136,7 @@ function winCondations() {
 
     }
     else if (cell1.innerHTML === "O" && cell4.innerHTML === "O" && cell7.innerHTML === "O") {
+        ifWin = true;
         setTimeout(() => {
             player2scores++
             player2score.innerHTML = `${player2scores}`
@@ -138,6 +147,7 @@ function winCondations() {
     }
 
     else if (cell7.innerHTML === "O" && cell8.innerHTML === "O" && cell9.innerHTML === "O") {
+        ifWin = true;
         setTimeout(() => {
             player2scores++
             player2score.innerHTML = `${player2scores}`
@@ -147,6 +157,7 @@ function winCondations() {
 
     }
     else if (cell3.innerHTML === "O" && cell6.innerHTML === "O" && cell9.innerHTML === "O") {
+        ifWin = true;
         setTimeout(() => {
             player2scores++
             player2score.innerHTML = `${player2scores}`
@@ -156,6 +167,7 @@ function winCondations() {
 
     }
     else if (cell3.innerHTML === "O" && cell5.innerHTML === "O" && cell7.innerHTML === "O") {
+        ifWin = true;
         setTimeout(() => {
             player2scores++
             player2score.innerHTML = `${player2scores}`
@@ -165,6 +177,7 @@ function winCondations() {
 
     }
     else if (cell1.innerHTML === "O" && cell5.innerHTML === "O" && cell9.innerHTML === "O") {
+        ifWin = true;
         setTimeout(() => {
             player2scores++
             player2score.innerHTML = `${player2scores}`
@@ -174,6 +187,7 @@ function winCondations() {
 
     }
     else if (cell2.innerHTML === "O" && cell5.innerHTML === "O" && cell8.innerHTML === "O") {
+        ifWin = true;
         setTimeout(() => {
             player2scores++
             player2score.innerHTML = `${player2scores}`
@@ -184,6 +198,7 @@ function winCondations() {
 
     }
     else if (cell4.innerHTML === "O" && cell5.innerHTML === "O" && cell6.innerHTML === "O") {
+        ifWin = true;
         setTimeout(() => {
             player2scores++
             player2score.innerHTML = `${player2scores}`
@@ -198,7 +213,7 @@ function winCondations() {
         }
     });
 
-    if (allClicked) {
+    if (allClicked && !ifWin) {
         setTimeout(() => {
             alert("Draw");
             resetGame();
@@ -206,6 +221,7 @@ function winCondations() {
     }
 }
 function resetGame() {
+
      isClicked = false
     cells.forEach(eachCell => {
       eachCell.innerHTML = ""
@@ -213,6 +229,3 @@ function resetGame() {
     });
     
 }
- 
-
-
