@@ -7,18 +7,14 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
 body {
     min-height: 100vh;
-    background-color: #0199ff;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('img/background.jpg') no-repeat center center fixed;
+    background: url(img/background.jpg);
     background-size: cover;
-  }
-  
-
+}
 
 main {
     width: 100%;
@@ -28,19 +24,74 @@ main {
 }
 
 .gameBox {
-    background-color: rgb(188, 226, 233);
-    width: 450px;
-    height: 450px;
     display: grid;
+    gap: 5px;
     grid-template-columns: repeat(3, 150px);
     grid-template-rows: repeat(3, 150px);
+    user-select: none;
 }
 
 .borders {
     display: grid;
     place-content: center;
-    border: 1px grey solid;
+    border: 1px rgb(92, 92, 92) solid;
+    background-color: rgb(188, 226, 233);
+    border-radius: 10px;
 }
-.clicked{
+
+.clicked {
     font-size: 4rem;
+    transform: scale(102%);
+    transition: transform 0.1s;
+    border: 2px solid rgb(8, 64, 247);
+    background-color: rgb(158, 193, 199);
+}
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+    .gameBox {
+        grid-template-columns: repeat(3, 120px);
+        grid-template-rows: repeat(3, 120px);
+    }
+
+    .borders {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .gameBox {
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: repeat(3, 100px);
+    }
+
+    .borders {
+        font-size: 2.5rem;
+    }
+
+    .clicked {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-size: cover;
+        padding: 10px;
+    }
+
+    .gameBox {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+        gap: 3px;
+    }
+
+    .borders {
+        font-size: 2rem;
+    }
+
+    .clicked {
+        font-size: 2.5rem;
+    }
 }
